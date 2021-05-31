@@ -1,6 +1,6 @@
 # Code and Data for M3A: Multimodal Multi-speaker Mergers &amp; Acquisitions at ACL-IJCNLP 2021
 
-# Multimodal Multi-Speaker Merger & AcquisitionFinancial Modeling: A New Task, Dataset, and Neural Baselines
+# Multimodal Multi-Speaker Merger & Acquisition Financial Modeling: A New Task, Dataset, and Neural Baselines
 
 This repository contains the code and dataset for M3ANet, the model introduced in Multimodal Multi-Speaker Merger & AcquisitionFinancial Modeling: A New Task, Dataset, and Neural Baselines.
 
