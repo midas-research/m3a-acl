@@ -11,6 +11,24 @@ The dataset folder contains the processed form of all the merger and acquisition
 
 Each folder contains two CSVs Text.csv and Audio.csv. The Text.csv file contains the speaker annotation for each utterance labeled as described in the paper followed by the BERT [5] embedding of the utterance. The Audio.csv file contains the 62 GeMAPSv01b [7] audio features for each utterance as obtained from OpenSMILE [6]. For a call with n utterances, Text.csv has a shape (n, 769) while Audio.csv has a shape (n, 62).
 
+# Run
+Execute the following steps in the given environment.
+
+```bash
+cd m3a-acl & python m3a.py
+```
+
+If you wish to change the hyperparameters, kindly edit the script m3a.py and change the following parameters:
+1) batch_size : Default is 64.
+2) learning_rate : Default is 1e-3.
+3) volatility_feedforward_size : Alters the size of the feedforward network of the Volatility model. Default is 16.
+4) volatility_hidden_dim : Alters the dimension of the hidden layer of the Volatility model. Default is 16.
+5) volatility_dropout : Alters the dropout rate of the Volatility model. Default is 0.1
+6) movement_feedforward_size : Alters the size of the feedforward network of the Price Movement model. Default is 64.
+7) movement_hidden_dim : Alters the dimension of the hidden layer of the Price Movement model. Default is 32.
+8) movement_dropout : Alters the dropout rate of the Price Movement model. Default is 0.0
+
+
 # Obtaining Raw Data
 
 To obtain the raw data, you will need a valid Bloomberg login for the Bloomberg Terminal [4]. After logging in, you will need to search for the keywords ‘merger’ and ‘acquisition’ to retrieve all the calls that had either merger or acquisition in their title. From these calls, we further apply the following filters:
