@@ -392,7 +392,7 @@ for i in range(3):
   
   predTest = model.predict([X_text_Train,X_audio_Train,X_pos_Train,X_speak_Train]).round()
   mcc = matthews_corrcoef(YTrain, predTest)
-  f1 = f1_score(YTest,predTest)
+  f1 = f1_score(YTrain,predTest)
   print('F1 for Training Set for ',YPrint[i],': ',f1)
   print('MCC for Training Set for ',YPrint[i],': ',mcc)  
   
