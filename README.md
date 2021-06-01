@@ -41,6 +41,15 @@ Download the audio and the text transcripts of the retrieved calls to recreate t
 
 Examining a speaker's tone and speech in conference calls is a well-studied task in past literature [1][2]. Our work focuses only on calls for which companies publicly release transcripts and audio recordings. The data used in our study corresponds to M\&A conference calls of companies in the NASDAQ stock exchange. We acknowledge the presence of gender bias in our study, given the imbalance in the gender ratio of speakers of the calls. We also acknowledge the demographic bias [3] in our study as the companies are organizations within the public stock market of the United States of America and may not generalize directly to non-native speakers.
 
+# Cite
+@inproceedings{m3a2021,
+  title     = {Multimodal Multi-Speaker Merger & AcquisitionFinancial Modeling: A New Task, Dataset, and Neural Baselines},
+  author    = {Sawhney, Ramit and Goyal, Mihir and Goel, Prakhar and Mathur, Puneet and Shah, Rajiv Ratn },
+  booktitle = {Proceedings of the The Joint Conference of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing, {ACL-IJCNLP 2021}},
+  publisher = {Association for Computational Linguistics and International Joint Conference on Natural Language Processing},             
+  year      = {2021},
+}
+
 # References
 
 [1] Yu Qin and Yi Yang. 2019. What you say and how you say it matters: Predicting stock volatility using verbal and vocal cues. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages 390–401, Florence, Italy. Association for Computational Linguistics.
