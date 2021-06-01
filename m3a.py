@@ -158,7 +158,7 @@ def createModelV(emd1, emd2, heads, dimFF, dimH, drop, maxlen, maxSpeaker):
   model = keras.Model(inputs=[text,audio,pos,speak], outputs=outputs)
   return model
 
-def createModelC(emd1, emd2, heads, dimFF, dimFF, dimH, drop, maxlen, maxSpeaker):
+def createModelC(emd1, emd2, heads, dimFF, dimH, drop, maxlen, maxSpeaker):
   embed_dim1 = emd1   # Embedding size for Text 
   embed_dim2 = emd2   # Embedding size for Audio
   num_heads = heads   # Number of attention heads
@@ -209,14 +209,14 @@ X = []
 maxLen = 0
 index = 1
 for i in tqdm(range(len(files))):
-  f = files[i]
+  f = files[i][:-4]
   d = str(dates[i]).split('/')
   date = d[-1] + '-'
   if(len(d[0]) == 2):
     date += d[0] + '-'
   else:
     date += '0'+d[0]+'-'
-  if(len(d[0]) == 2):
+  if(len(d[1]) == 2):
     date += d[1] 
   else:
     date += '0'+d[1]
@@ -242,14 +242,14 @@ Xspeak = []
 maxSpeaker = 0
 index = 1
 for i in tqdm(range(len(files))):
-  f = files[i]
+  f = files[i][:-4]
   d = str(dates[i]).split('/')
   date = d[-1] + '-'
   if(len(d[0]) == 2):
     date += d[0] + '-'
   else:
     date += '0'+d[0]+'-'
-  if(len(d[0]) == 2):
+  if(len(d[1]) == 2):
     date += d[1] 
   else:
     date += '0'+d[1]
@@ -278,14 +278,14 @@ X = []
 maxLen = 0
 index = 1
 for i in tqdm(range(len(files))):
-  f = files[i]
+  f = files[i][:-4]
   d = str(dates[i]).split('/')
   date = d[-1] + '-'
   if(len(d[0]) == 2):
     date += d[0] + '-'
   else:
     date += '0'+d[0]+'-'
-  if(len(d[0]) == 2):
+  if(len(d[1]) == 2):
     date += d[1] 
   else:
     date += '0'+d[1]
